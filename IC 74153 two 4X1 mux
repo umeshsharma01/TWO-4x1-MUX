@@ -1,0 +1,14 @@
+module two_4x1_74153_mux(
+    input d10,d11,d12,d13,d20,d21,d22,d23,s0,s1,g1,g2,
+    output  y1,y2
+    );
+   
+    
+    assign y1=g1&(d10&(~s0)|d11&s0);
+    assign y1=g1&(d12&(~s0)|d13&s0);
+
+    
+    assign y2=g2&(d20&(~s1)|d21&s1);
+    assign y2=g2&(d22&(~s1)|d23&s1);
+    
+endmodule
